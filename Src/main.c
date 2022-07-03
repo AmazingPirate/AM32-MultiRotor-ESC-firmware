@@ -1521,7 +1521,9 @@ loadEEpromSettings();
 #endif
  while (1)
   {
-
+MX_IWDG_Init();
+ inputSet = 1;
+ armed = 1;
 LL_IWDG_ReloadCounter(IWDG);
 
 	  adc_counter++;
