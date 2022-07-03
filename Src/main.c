@@ -654,6 +654,13 @@ void loadEEpromSettings(){
 		   servo_high_threshold = (eepromBuffer[33]*2) + 1750;;  // anything above this point considered 2000 (max)
 		   servo_neutral = (eepromBuffer[34]) + 1374;
 		   servo_dead_band = eepromBuffer[35];
+		   
+		  	servo_low_threshold = 526;	// anything below this point considered 0
+			servo_high_threshold = 750;	// anything above this point considered 2000 (max)
+			servo_neutral = 580;
+			servo_dead_band = 12;
+
+		   
 
 		   if(eepromBuffer[36] == 0x01){
 			   LOW_VOLTAGE_CUTOFF = 1;
