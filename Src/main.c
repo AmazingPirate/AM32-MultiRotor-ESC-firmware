@@ -938,7 +938,7 @@ void startMotor() {
 
 void tenKhzRoutine(){
 
-
+	input = 1050;
 	tenkhzcounter++;
 	if(tenkhzcounter > 10000){      // 1s sample interval
 		consumed_current = (float)actual_current/360 + consumed_current;
